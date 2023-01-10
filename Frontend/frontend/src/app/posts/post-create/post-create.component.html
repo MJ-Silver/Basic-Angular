@@ -1,0 +1,11 @@
+<form (submit)="onaddPost(addPost)" #addPost="ngForm">
+
+        <label for="enteredTitle">Title:</label><br>
+        <input type="text" id="title" name="title" ngModel placeholder="Title ID" required minlength="1" 
+        pattern="^[a-zA-Z0-9\s_-]+$" #title="ngModel"><br>
+        <label for="enteredDesc">Description:</label><br>
+        <input type="text" id="desc" name="desc" ngModel placeholder="Desc ID" required minlength="1"
+         pattern="^[a-zA-Z0-9\s_-]+$" #desc="ngModel"><br>
+    
+        <button type="submit">Add Post</button>
+</form>

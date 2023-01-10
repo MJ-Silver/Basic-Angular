@@ -1,0 +1,40 @@
+
+<div class="login-wrapper">  
+    <div class="card">
+      <div class="card-body">
+  
+  <form class="form-login"  (submit)="onlogin(loginform)" #loginform="ngForm">
+      <p><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs6LZWeI_3LMOr42vf_8g0bjHCnBJn_IcPHQ&usqp=CAU" 
+        width="50" height="50"/></p>
+     
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+  
+      <div class="form-floating">
+        <input type="text" ngModel name="enteredusername"
+    placeholder="Username"
+    required
+    minlength="1"
+    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+    #enteredusername="ngModel"
+    />
+    <div *ngIf="enteredusername.invalid && (enteredusername.dirty || enteredusername.touched)">invalid</div>
+    <br>
+      </div>
+      <div class="form-floating">
+        <input type="password" ngModel name="enteredpassword"
+        placeholder="Password"
+        required
+        minlength="1"
+        pattern="^([a-zA-Z0-9@*#]{8,15})$"
+        #enteredpassword="ngModel"
+        />
+        <div *ngIf="enteredpassword.invalid && (enteredpassword.dirty || enteredpassword.touched)">invalid</div>
+        <br>
+      </div>
+      <button class="w-60 btn btn-lg btn-primary" type="submit">{{option}}</button>
+      
+    </form>    
+  </div>
+        </div>
+  </div>
+  

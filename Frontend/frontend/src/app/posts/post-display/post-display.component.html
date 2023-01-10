@@ -1,0 +1,10 @@
+<table class="card">
+    
+       <div class="card" *ngFor="let post of posts"><tr>
+    {{post.title}}
+    <li>{{post.description}}</li>
+    <button class="w-5 btn btn-lg  btn-primary" (click)="ondelete(post._id)">Delete</button>
+</tr>
+</div> 
+    
+</table>
